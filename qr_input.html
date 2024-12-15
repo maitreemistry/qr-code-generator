@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta description="This page creates QR code">
+    <title>QR Code Generation</title>
+    <script src="//code.jquery.com/jquery-1.8.2.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+
+<body style="background-image:url(bg.png); background-color: antiquewhite;">
+    <h1 style="font-family:Arial, Helvetica, sans-serif; font-size:50px;  color:rgb(57, 55, 55);">MAITREE'S QR CODE GENERATOR</h1>
+    <label for="qrr" style="font-family:Arial, Helvetica, sans-serif; font-size:25px;">Insert the link: </label>
+    <input name="qrr" id="qrr" placeholder="Paste your link here" style="padding: 10px;">
+    <div id="qrcode" style="padding: 10px;height:auto;width:65px;"></div>
+    <button onclick="qrfunction()" style="font-size:20px; padding: 10px;">Generate</button>
+</body>
+
+<script>
+    function qrfunction(){
+    var container=  document.getElementById("qrcode");
+    container.innerHTML = "";
+
+    var qrcode= new QRCode(
+        "qrcode",
+        {
+            text: document.getElementById("qrr").value,
+            width: 300,
+            height: 300,
+            colorDark: "#000000",
+            colorLight: "#FFFFFF",
+            correctLevel: QRCode.CorrectLevel.M
+            }
+    );
+   }
+</script>
+
+</html>
