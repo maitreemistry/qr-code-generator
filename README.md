@@ -1,5 +1,7 @@
 # QR Code Generator 📱
 
+![img](img.png)
+
 This project is a simple QR Code generator built using **HTML**, **CSS**, **JavaScript**, and **jQuery**. It allows users to input a URL or text, and it generates a corresponding QR code that can be scanned by mobile devices.
 
 ## Features ✨
